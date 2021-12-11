@@ -50,45 +50,45 @@
   }
 
   .header {
-      background-image: url("images/desktop/image-header.jpg");
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 787px;
-      background-size: cover;
+    height: 100%;
+    background-image: url("images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    padding: 0 2.5rem;
+    background-size: cover;
     background-position: center;
     position: relative;
     color: var(--White);
   }
+ 
 
-  .header-nav {
-      padding: 16px;
+
+  .navigation {
+      padding: 3rem 0rem 6.5rem;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
   }
-  .header-nav ul {
+
+  
+  .primary-navigation {
       display: flex;
       list-style-type:none;
-      gap: 50px;
-      margin-right: 32px;
+      gap: 54px;
   }
   
 
-  .header-nav ul li a {
+  .links {
       text-decoration: none;
       color: var(--White);
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: 600;
   }
 
-  .logo-wrapper {
-      margin-top: 48px;
-      margin-left: 40px;
-  }
+  
 
   /* Funny snippet */
 
-  .header-nav ul:last-child li:last-child a:last-child {
+.primary-navigation:last-child li:last-child a:last-child {
       color: var(--Very-dark-desaturated-blue);
       background-color: var(--White);
       padding: 16px 32px;
@@ -97,7 +97,7 @@
       text-transform: uppercase;
   }
 
-  .header-nav ul:last-child li:last-child a:last-child:hover {
+.primary-navigation:last-child li:last-child a:last-child:hover {
       color: var(--White);
       background-color: #7cd5ff;
       transition: 0.4s;
@@ -108,15 +108,17 @@
     font-family: 'Fraunces', serif;
     font-size: 3.5rem;
     letter-spacing: 8px;
+    line-height: 69px;
     text-align: center;
-    margin-top: 32px;
+    margin-bottom: 6rem;
 }
 
-.arrow-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 64px;
+.arrow-wrapper img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20.626rem;
 }
+
 
 .grid-container {
     display: grid;
@@ -239,7 +241,7 @@
 }
 
 .third-row-left {
-    background-image: url('/images/desktop/image-graphic-design.jpg');
+    background-image: url('images/desktop/image-graphic-design.jpg');
     background-size: cover;
     background-position: center;
     height: 668px;
@@ -248,7 +250,7 @@
 }
 
 .third-row-right {
-    background-image: url('/images/desktop/image-photography.jpg');
+    background-image: url('images/desktop/image-photography.jpg');
     background-size: cover;
     background-position: center;
     height: 668px;
@@ -258,14 +260,14 @@
 
 .left-content,
 .right-content {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 100%;
-margin-top: auto;
-margin-bottom: 68px;
-gap: 32px;
-justify-content: center;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 68px;
+    gap: 32px;
+    justify-content: center;  
 }
 
 .left-content h2,
@@ -285,10 +287,7 @@ justify-content: center;
     
 }
 
-
-
-
-.second {
+.client-testimonials {
  padding: 10rem 2rem 10rem;
     display: flex;
     flex-direction: column;
@@ -296,35 +295,31 @@ justify-content: center;
 
 }
 
-.second h2 {
+.client-testimonials h2 {
     font-family:"Fraunces", serif;
-font-weight: 900;
-font-size: 20px;
-line-height: 25px;
-text-align: center;
-letter-spacing: 5px;
-color: var(--Grayish-blue);
-margin-bottom: 5rem;
-text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: var(--Grayish-blue);
+    margin-bottom: 5rem;
+    text-transform: uppercase;
 }
 
-
-
 .clients-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    max-width: 1120px;
-    gap: 32px;
-    
-    
+    display: flex;
+    gap: 36px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .clients-wrapper img {
-    
     width: 72px;
     border-radius: 50%;
-    
+    margin-bottom: 36px;
 }
 
 .emily {
@@ -353,20 +348,79 @@ text-transform: uppercase;
 
 .name {
     font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 9px;
+}
 
-font-weight: 900;
-font-size: 18px;
-line-height: 22px;
+.description {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 32px;
+    color: var(--Very-dark-grayish-blue);
+    margin-bottom: 76px;
+    font-family: "Barlow", sans-serif;
+    max-width: 350px;
+    text-align: center;
 
-color: var(--very-dark-desaturated-blue);
-margin-bottom: 0.5rem;
+}
+
+.position {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 25px;
+    color: var(--Grayish-blue);
+}
+
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: #90d4c6;
+    padding: 4rem 2.5rem 5rem;
+}
+
+.footer-logo {
+    display: block;
+    text-align: center;  
+}
+
+.footer-logo svg {
+    color: var(--Dark-desaturated-cyan)
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 46px;
+    margin-bottom: 100px;
+}
+.info-wrapper a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--Dark-moderate-cyan)
 }
 
 
 
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 32px
+}
 
+.icon-wrapper a svg {
+    color: var(--Dark-moderate-cyan)
+}
 
-
-
-
-
+.info-wrapper a:hover,
+.icon-wrapper a svg:hover {
+    color: var(--White);
+    transition: 0.6s
+}
